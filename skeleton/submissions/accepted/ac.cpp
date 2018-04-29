@@ -55,29 +55,32 @@ long long unionNodes(Node *one, Node *two) {
 	return newRoot->numNodes;
 }
 
+//got modInverse idea from GeeksForGeeks
 long long modInverse(long long a, long long m)
-{
-	long long m0 = m;
-	long long y = 0, x = 1;
-
-	if (m == 1)
-		return 0;
-
-	while (a > 1)
+{	
+	long long y = 0;
+	long long modCopy = m;
+	long long returnInverseValue = 1;	
+	if(m!=1)
 	{
 
-		long long q = a / m;
-		long long t = m;
-		m = a % m, a = t;
-		t = y;
-		y = x - q * y;
-		x = t;
+		while (a > 1)
+		{
+			long long quotient = a / m;long long mC = m;
+
+			m = a % m;
+			a = mC;
+			mC = y;
+			y = returnInverseValue - quotient * y;
+			returnInverseValue = mC;
+		}
+
+		if (returnInverseValue < 0)
+			returnInverseValue += modCopy;
+
+		return returnInverseValue;
 	}
-
-	if (x < 0)
-		x += m0;
-
-	return x;
+	return 0;
 }
 
 int main() {
