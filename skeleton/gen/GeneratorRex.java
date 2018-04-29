@@ -1,19 +1,17 @@
-
-
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 
-public class GeneratorRex {
+public class GeneratorMax {
 	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException
 	{
-		PrintWriter writer = new PrintWriter("test3.in", "UTF-8");
-		int cases = (int)(Math.random()*5 +1);
+		PrintWriter writer = new PrintWriter("test4.in", "UTF-8");
+		int cases = 5;
 		writer.println(cases);
 		for(int i = 0; i < cases; i++){
-			int n = (int)(Math.random()*100000 +1);
-			int m = (int)(Math.random()*100000 +1);
+			int n = 100000;
+			int m = 100000;
 			writer.println(n + " " + m);
 			HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
 			for(int j = 0; j < m; j++)
