@@ -8,17 +8,14 @@ import java.util.HashSet;
 public class GeneratorRex {
 	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException
 	{
-		PrintWriter writer = new PrintWriter("004-random.in", "UTF-8");
-		int cases = (int)(Math.random()*5 +1);
-		writer.println(cases);
-		for(int i = 0; i < cases; i++){
+		PrintWriter writer = new PrintWriter("003-random.in", "UTF-8");
 			int n = (int)(Math.random()*100000 +1);
 			int m = (int)(Math.random()*100000 +1);
 			writer.println(n + " " + m);
 			HashSet<Pair> hm = new HashSet<Pair>();
 			for(int j = 0; j < m; j++)
 			{
-				
+
 				int i2 = (int)(Math.random()*n +1);
 				int j2 = (int)(Math.random()*n +1);
 				Pair p1= new Pair(i2,j2);
@@ -39,7 +36,6 @@ public class GeneratorRex {
 				hm.add(p2);
 				writer.println(i2 + " " + j2);
 			}
-		}
 		writer.close();
 	}
 }
