@@ -21,7 +21,7 @@ public class GeneratorMax {
 				int i2 = (int)(Math.random()*n +1);
 				int j2 = (int)(Math.random()*n +1);
 				while(hm.get(i2) != null && hm.get(j2)!= null){
-					if(hm.get(i2) != hm.get(j2))
+					if(hm.get(i2) != j2 && hm.get(j2) != i2 && i2 != j2)
 					{
 						break;
 					}
