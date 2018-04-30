@@ -2,21 +2,15 @@
 
 You woke up today and suddenly found that you have superpowers! You are Spaceman! You decide to explore your powers and fly to a different planet where life exists. However, upon reaching the planet you find that the aliens on the planet are on the brink of extinction because there are multiple volcanoes erupting simultaneously. If the planet is left as is, everyone on the planet will perish. You decide to put your powers to test and save the aliens. To do so, you decide to open wormholes that will act as safe passages for the aliens to get to planet Earth.
 
-You want to however be mindful of the fact that there are many aliens, and so you want to maximize the number of wormholes you open to ensure minimal crowding. 
+You want to however be mindful of the fact that there are many aliens, and so you want to maximize the number of wormholes you open to ensure minimal crowding in such a way that each wormhole transports at least one alien. 
 
-At the same time, you want to ensure aliens belonging to the same families travel through the same wormhole. Keep in mind the "family" relation is mutual in that, if i and j belong to the same family, j and i belong to the same family. On this planet, it is not necessary familial relationships are transitive. So if i and j belong to the same family, j and k belong to the same family, it is not necessary that i and k belong to the same family. Moreover, every family will have a family head who will be responsible for the well-being of their family. 
+At the same time, you want to ensure aliens belonging to the same families travel through the same wormhole. Keep in mind the "family" relation is mutual in that, if i and j belong to the same family, j and i belong to the same family. Family relations are also transitive. Moreover, you will also choose a family head for every family who is responsible for that family's well-being.
 
-Find the maximum number of wormholes you can create and in total, the number of ways you can choose a family head for every wormhole (mod $10^{9}+7$).\newline
+Find the maximum number of wormholes you can create and in total, the number of ways you can choose a family head for every family passing through a wormhole (mod $10^{9}+7$).\newline
 
 \section*{Input}
- \indent The input starts with a value t ($1 \le t \le $5) representing the number of test cases. 
-  Each case starts with two numbers n ($1 \le n \le $100000) and m ($1 \le m \le $100000), representing the number of aliens and the number of familial relationships. Each of the following m lines, will contain a pair of numbers, i and j, denoting that alien number i and alien number j, belong to the same family ($1 \le i,j \le n, i \neq j)$ and each (i,j) pair will appear only once in the input.
-
+ \indent 
+  The input starts with two numbers n $(1 \le n \le 10^{5})$ and m $(1 \le m \le 10^{5})$, representing the number of aliens and the number of familial relationships. Each of the following m lines, will contain a pair of numbers, i and j, denoting that alien number i and alien number j, belong to the same family $(1 \le i,j \le n, i \neq j)$ and each (i,j) pair will appear only once in the input.
+  
 \section*{Output}
-Output the number of wormholes you can create given these family relations.
-
-\section*{Subtasks}
-\begin{itemize}
-	 \item Easy: After the entire input, output the number of wormholes you can create.
-    	 \item Hard: After each input, output the number of wormholes you can create for every input.
-\end{itemize}
+For every new relation, output the "real-time" number of ways you can choose family heads (mod $10^{9}+7$). Once all the relations have been processed, finally print the number of wormholes you can create and the final number of ways you can choose a family head for every family passing through a wormhole (mod $10^{9}+7$).
