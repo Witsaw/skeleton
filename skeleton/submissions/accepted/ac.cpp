@@ -87,7 +87,7 @@ int main() {
 
 
 	ios_base::sync_with_stdio(false);
-	long long tCases;cin >> tCases;
+	long long tCases;tCases=1;
 	for (long long i = 0;i < tCases;i++) {
 		long long n, m;cin >> n >> m;
 		long long numPeople = n;
